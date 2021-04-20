@@ -5,8 +5,6 @@
 #ifndef POCS_INTEGRATOR_H
 #define POCS_INTEGRATOR_H
 
-#include <cmath>
-
 class Integrator {
 public:
 

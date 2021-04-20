@@ -28,9 +28,9 @@ private:
     double *t_;
 
     double x1 = 1;
-    double dx1;
+    double dx1 = 0;
     double x2 = 1;
-    double dx2;
+    double dx2 = 0;
     double x3 = 10;
 
     double *output_;

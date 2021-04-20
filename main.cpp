@@ -13,7 +13,7 @@ int main() {
 
     double t = t0;
     double output;
-    auto *generator = new Generator(&t, &output, stride);
+    auto *generator = new Generator(&t, &output);
 
     for (int i = 0; i < N; ++i) {
         generator->compute();
