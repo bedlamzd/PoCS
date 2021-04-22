@@ -7,7 +7,14 @@
 int main() {
     const double t0 = 0;
     const double tf = 50;
-    const double stride = 0.01;
+    double cur_t = t0;
+    const double stride = 0.009;
+
+    if (cur_t < tf){
+        cur_t += stride;
+    }
+
+
     const double dt = 0.01;
     std::vector<double> t_data;
     std::vector<double> u_data;
@@ -20,7 +27,7 @@ int main() {
     Matrix<3, 3> gen_A = Matrix<3, 3>(valarray<double_t>({
                                                                  .9900, 0, 0,
                                                                  0, .9802, 0,
-                                                                 0, 0, 1
+                                                                 0, 0, 1.0
                                                          }));
 
     Matrix<1, 3> gen_C = Matrix<1, 3>(valarray<double_t>({-1, 3, 1}));
@@ -30,17 +37,16 @@ int main() {
     generator->set_C(gen_C);
     generator->set_X(gen_X0);
 
-
     Matrix<3, 3> obj_A = Matrix<3, 3>(valarray<double_t>({
-                                                                 1.000, .0100, .0000,
-                                                                 -.0000, 1.000, .0100,
-                                                                 -.0050, -.0100, .9940
+                                                                 1.0000, 0.0100, 0.0000,
+                                                                 -0.0000, 1.0000, 0.0100,
+                                                                 -0.0050, -0.0100, 0.9940
                                                          }));
 
     Matrix<3, 1> obj_B = Matrix<3, 1>(valarray<double_t>({
-                                                                 .0000,
-                                                                 .0000,
-                                                                 .0100
+                                                                 .0,
+                                                                 .0,
+                                                                 .01
                                                          }));
 
     Matrix<1, 3> obj_C = Matrix<1, 3>(valarray<double_t>({.1, 10, 1}));
@@ -60,7 +66,7 @@ int main() {
     }
 
     for (int i = 0; i < y_data.size(); ++i) {
-        std::cout << u_data[i] << " " << y_data[i] << std::endl;
+        std::cout << t_data[i] << " " << u_data[i] << " " << y_data[i] << std::endl;
     }
 
     return 0;

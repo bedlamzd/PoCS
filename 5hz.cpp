@@ -33,7 +33,7 @@ int main() {
     Matrix<3, 3> obj_A = Matrix<3, 3>(valarray<double_t>({
                                                                  .9994, .1987, .0192,
                                                                  -.0096, .9802, .1872,
-                                                                 -.0936, -.1968, -.8679
+                                                                 -.0936, -.1968, .8679
                                                          }));
 
     Matrix<3, 1> obj_B = Matrix<3, 1>(valarray<double_t>({

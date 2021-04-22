@@ -47,7 +47,7 @@ public:
 
     Matrix<_p, 1> compute(double_t t, Matrix<_p, 1> u) {
         Y_ = C_ * X_ + D_ * u;
-        if (t - prev_t_ > sample_time_){
+        if (t - prev_t_ >= sample_time_){
             X_ = A_ * X_ + B_ * u;
             prev_t_ = t;
         }
