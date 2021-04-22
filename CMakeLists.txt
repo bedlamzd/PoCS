@@ -3,7 +3,7 @@ project(PoCS)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_PREFIX_PATH "/home/bedlamzd/Qt/6.0.3/gcc_64/lib/cmake")
-add_executable(PoCS continous.cpp)
+add_executable(PoCS continuos.cpp)
 add_executable(PoCS-5Hz 5hz.cpp)
 add_executable(PoCS-25Hz 25hz.cpp)
 add_executable(PoCS-100Hz 100hz.cpp)
