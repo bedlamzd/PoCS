@@ -42,7 +42,6 @@ public:
     void set_X(Matrix<_n, 1> X) {
         for (int i = 0; i < _n; ++i) {
             X_(i, 0) = X(i, 0);
-            I_[i] = new Integrator(X_(i, 0));
         }
     }
 
@@ -66,7 +65,6 @@ public:
 
 private:
     Matrix<_n, 1> X_;
-    Matrix<_n, 1> dX_;
     Matrix<_p, 1> Y_;
 
     Matrix<_n, _n> A_;
@@ -74,7 +72,6 @@ private:
     Matrix<_q, _n> C_;
     Matrix<_q, _p> D_;
 
-    Integrator I_[_n];
     double_t prev_t_ = 0;
     const double_t sample_time_;
 };
