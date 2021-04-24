@@ -100,7 +100,7 @@ void MainWindow::setupStateSpaceDemo(QCustomPlot *customPlot) {
     // generate some data:
     auto t0 = 0;
     auto tf = 50;
-    auto stride = 1e-3;
+    auto stride = 1e-4;
     unsigned N = (int) ((tf - t0) / stride);
 
     Matrix<3, 1> gen_X0 = Matrix<3, 1>(valarray<double_t>({1, 1, 10}));
@@ -156,7 +156,7 @@ void MainWindow::setupDiscreteStateSpaceDemo5(QCustomPlot *customPlot) {
     // generate some data:
     auto t0 = 0;
     auto tf = 50;
-    auto stride = 1e-3;
+    auto stride = 1e-4;
     unsigned N = (int) ((tf - t0) / stride);
     auto dt = 0.2;
 
@@ -221,7 +221,7 @@ void MainWindow::setupDiscreteStateSpaceDemo25(QCustomPlot *customPlot) {
     // generate some data:
     auto t0 = 0;
     auto tf = 50;
-    auto stride = 1e-3;
+    auto stride = 1e-4;
     unsigned N = (int) ((tf - t0) / stride);
     auto dt = 0.04;
 
@@ -286,7 +286,7 @@ void MainWindow::setupDiscreteStateSpaceDemo100(QCustomPlot *customPlot) {
     // generate some data:
     auto t0 = 0;
     auto tf = 50;
-    auto stride = 1e-3;
+    auto stride = 1e-4;
     unsigned N = (int) ((tf - t0) / stride);
     auto dt = 0.01;
 
