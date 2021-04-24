@@ -32,8 +32,21 @@ int main(int argc, char *argv[])
   QApplication::setGraphicsSystem("raster");
 #endif
   QApplication a(argc, argv);
-  MainWindow w(2);
-  w.show();
+  // Continuous State Space
+  MainWindow w0(0);
+  w0.show();
+
+  // 5 Hz Discrete State Space
+  MainWindow w1(1);
+  w1.show();
+
+  // 25 Hz Discrete State Space
+  MainWindow w2(2);
+  w2.show();
+
+  // 100 Hz Discrete State Space
+  MainWindow w3(3);
+  w3.show();
   
   return a.exec();
 }
