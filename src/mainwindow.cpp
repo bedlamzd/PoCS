@@ -152,7 +152,7 @@ void MainWindow::setupStateSpaceDemo(QCustomPlot *customPlot) {
 }
 
 void MainWindow::setupDiscreteStateSpaceDemo5(QCustomPlot *customPlot) {
-    demoName = "Continuous State Space Demo";
+    demoName = "Discrete 5Hz State Space Demo";
     // generate some data:
     auto t0 = 0;
     auto tf = 50;
@@ -217,7 +217,7 @@ void MainWindow::setupDiscreteStateSpaceDemo5(QCustomPlot *customPlot) {
 }
 
 void MainWindow::setupDiscreteStateSpaceDemo25(QCustomPlot *customPlot) {
-    demoName = "Continuous State Space Demo";
+    demoName = "Discrete 25Hz State Space Demo";
     // generate some data:
     auto t0 = 0;
     auto tf = 50;
@@ -282,7 +282,7 @@ void MainWindow::setupDiscreteStateSpaceDemo25(QCustomPlot *customPlot) {
 }
 
 void MainWindow::setupDiscreteStateSpaceDemo100(QCustomPlot *customPlot) {
-    demoName = "Continuous State Space Demo";
+    demoName = "Discrete 100Hz State Space Demo";
     // generate some data:
     auto t0 = 0;
     auto tf = 50;
